@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>mp3 app</title>
 
     <link rel="stylesheet" href="mp3.css">
@@ -11,12 +12,16 @@
 <body>
 
     <div id="container">
+        <span>mp3 player</span>
         <div id="topContainer">
             <button id="preFile"><<</button>
-            <div id="cover"></div>
+            <div id="play">
+                
+            </div>
             <button id="nextFile">>></button>
         </div>
         <input type="range" min="1" max="300" id="currentPart" />
+        <audio controls src="audio/SleepAway.mp3" id="audio" type="audio/mp3"></audio>
     </div>
 
 
