@@ -52,15 +52,35 @@ span {
     box-shadow: 0 0 14px #555, 0 0 14px #555;
     width: 165px;
     height: 165px;
-    background: rgb(25, 138, 250);
+    /* background: rgb(25, 138, 250); */
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: calibri;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: normal;
+    line-break: strict;
+    hyphens: none;
+    text-align: center;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    font-size: 23px;
+    /* color: rgb(25, 138, 250); */
+    text-shadow: 0 0 5px #333, 0 0 5px #333;
 }
 
-#currentPart {
-    width: 90%;
+.currentPart {
+    width: 75%;
+    height: 50px;
     margin: 20px;
-    box-shadow: inset 0 0 5px 1px #999, 0 0 3px 1px #999;
-    border-radius: 30px;
+    box-shadow: inset 0 0 15px 1px #999, 0 0 13px 1px #999;
+    border-radius: 12px 12px 38px 38px;
+    font-size: 18px;
+    padding-bottom: 10px;
+    outline: none;
 }
 
 #audio {
