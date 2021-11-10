@@ -4,7 +4,7 @@ const audio =  document.getElementById('audio');
 const body = document.getElementsByTagName('body')[0];
 const play = document.getElementById('play');
 
-let songIndex = 1;
+let songIndex = 0;
 
 // song titles array
 
@@ -12,8 +12,8 @@ const songs = ['Kalimba','Maid with the Flaxen Hair','Sleep Away'];
 
 // font and background color arrays
 
-const bgColor = ['#C89D7C','#ADD8E6','#FFD580'];
-const fontColor = ['#FBD0AF','#E0FFFF','#FFFFB3'];
+const bgColor = ['#ADD8E6','#C89D7C','#FFD580'];
+const fontColor = ['#E0FFFF','#FBD0AF','#FFFFB3'];
 
 
 loadSong(songs[songIndex]);
