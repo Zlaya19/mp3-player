@@ -1,7 +1,35 @@
+
+@font-face {
+    font-family: 'BPdotsUnicase';
+    src: url('./font/BPdotsUnicase-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --primary: #888;
+    --secondary: #ccc;
+    --container: #eee;
+    --dark: #999;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(110, 110, 110, 0.8);
+    --shadow2:  0 1px 5px #888;
+
+
+    /* Dark theme */
+
+    --primaryDark: #333;
+    --darkDark: #111;
+    --container: rgb(56,56,56);
+    --seondaryDark: #444;
+    --shadowDark: 0 0 15px #111;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'BPdotsUnicase';
     user-select: none;
     outline: none;
 }
@@ -17,31 +45,40 @@ body {
 
 #container {
     width: 550px;
-    height: 300px;
-    border: 4px solid #fff;
+    height: 310px;
+    border: 5px solid #fff;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     background: dodgerblue;
     background: linear-gradient( #ccc, whitesmoke);
-    box-shadow: 0 0 30px #555,inset 0 0 6px #555;
+    box-shadow: 0 0 30px #999, inset 0 0 6px #999;
     border-radius: 10% 10% 35% 35%;
 }
 
 span {
     font-size: 28px;
-    font-family: calibri;
+    font-family: 'BPdotsUnicase';
     color: #fff;
     font-weight: bold;
     margin: 0 0 15px 0;
-    text-shadow: 0 3px 5px #777, 0 3px 5px #777; 
+    text-shadow: 0 3px 5px #777, 0 3px 5px #777;
+}
+
+.spanDark {
+    font-size: 28px;
+    font-family: 'BPdotsUnicase';
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    text-shadow: 0 0 3px #111;
 }
 
 #topContainer {
     width: 98%;
     height: 50%;
-    box-shadow: 0 2px 14px #777, 0 2px 14px #777;
+    box-shadow: 0 2px 14px #999, 0 2px 14px #999;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -51,14 +88,15 @@ span {
 #play {
     border: 4px solid #eee;
     box-shadow: 0 0 14px #777, inset 0 0 14px #777;
-    width: 165px;
-    height: 165px;
+    width: 170px;
+    height: 170px;
     /* background: rgb(25, 138, 250); */
     border-radius: 100%;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: calibri;
+    font-family: 'BPdotsUnicase';
     font-weight: bold;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -76,10 +114,22 @@ span {
 .currentPart {
     width: 75%;
     height: 50px;
-    margin: 20px;
+    margin-top: 25px;
     box-shadow: inset 0 0 15px 1px #999, 0 0 13px 1px #999;
     border-radius: 12px 12px 38px 38px;
     font-size: 18px;
+    padding-bottom: 10px;
+    outline: none;
+}
+
+.currentPartDark {
+    width: 75%;
+    height: 50px;
+    margin-top: 25px;
+    box-shadow: inset 0 0 15px 1px #111, 0 0 13px 1px #111;
+    border-radius: 12px 12px 38px 38px;
+    font-size: 18px;
+    background: #333;
     padding-bottom: 10px;
     outline: none;
 }
@@ -88,24 +138,52 @@ span {
     margin-bottom: 20px;
 }
 
+#darkTheme {
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    cursor: pointer;
+    padding: 6px 14px 10px 14px;
+    background: #fff;
+    border: none;
+    border: 3px solid #eee;
+    box-shadow: 0 0 8px #aaa, 0 0 8px #aaa;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 0 0 0 12px;
+    text-shadow: 0 0 3px #888, 0 0 3px #888;
+}
+
+#darkTheme:hover {
+    cursor: pointer;
+    background: #ddd;
+}
+
 #preFile, #nextFile {
     padding: 12px 20px;
     background: #fff;
     border: none;
     border: 3px solid #eee;
-    box-shadow: 0 0 14px #888, 0 0 14px #888;
+    box-shadow: 0 0 14px #aaa, 0 0 14px #aaa;
     font-size: 22px;
     font-weight: bold;
     color: #fff;
-    text-shadow: 0 0 3px #666, 0 0 3px #666;
+    text-shadow: 0 0 3px #777, 0 0 3px #777;
 }
 
 #preFile {
+    font-size: 26px;
     border-radius: 80% 8px 8px 80%;
+    padding: 12px 24px 16px 24px;
+    border-radius: 100% 100% 0 100%;
 }
 
 #nextFile {
+    font-size: 26px;
     border-radius:  8px 80% 80% 8px;
+    padding: 12px 24px 16px 24px;
+    border-radius: 100% 100% 100% 0;
 }
 
 #preFile:hover, #nextFile:hover {
@@ -126,6 +204,12 @@ span {
     }
 
     #preFile, #nextFile {
-        padding: 9px 15px;
+        padding: 10px 18px 14px 18px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #preFile, #nextFile {
+        padding: 6px 14px 10px 14px;
     }
 }
