@@ -34,6 +34,7 @@ function loadSong(song){
     preSong.style.color = bgColor[songIndex];
     lastSong.style.color = bgColor[songIndex];
     btnTheme.style.color = bgColor[songIndex];
+    spanHeadline.classList.add('span');
 }
 
 // Event listener for previous and next song
@@ -153,7 +154,7 @@ function prevSong() {
     lastSong.style.boxShadow = '0 0 15px #111';
     
     audio.classList.add('currentPartDark');
-    spanHeadline.classList.add('spanDark');
+    spanHeadline.style.textShadow = '0 0 3px #111';
   }
 
   function lightTheme(){
@@ -181,5 +182,5 @@ function prevSong() {
     lastSong.style.boxShadow = '0 0 14px #aaa, 0 0 14px #aaa';
     
     audio.classList.remove('currentPartDark');
-    spanHeadline.classList.add('spanDark');
+    spanHeadline.style.textShadow = '0 3px 5px #777, 0 3px 5px #777';
   }
